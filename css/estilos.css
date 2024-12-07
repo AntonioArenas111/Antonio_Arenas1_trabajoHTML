@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("../assets/Fran050G.jpg") center/cover no-repeat fixed;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: rgb(204, 191, 10);
+}
+
+.nav-links{
+    position: fixed;
+    top: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    z-index: 10 ;
+    animation: aparecer 1.5s ease forwards;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    animation: aparecer 1.5s ease forwards;
+}
+
+
+
+/*** clase secciones con contenido ***/
+
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #222121;
+    text-align: center;
+}
+section h2 {
+    margin-bottom: 80px;
+    color: #222121;
+    text-align: center;
+}
+
+.contenido {
+    background-color: #ffffff71;
+}
+
+.contenido-img {
+    background-color: #cdc9c971;
+}
+
+.contenedor {
+    width: 60%;
+    max-width: 800px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.contenedor-xl {
+    width: 80%;
+    max-width: 1200px;
+}
+
+
+/*** mi presentacion ***/
+.contenedor-img-txt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.contenedor-img-txt img {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+.cuadro-txt {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: -80px;
+}
+.cuadro-txt-mapa {
+    background-color: #fffbfbbe;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: -10px;
+}
+
+/***  seccion top ventas ***/
+.top-ventas {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.top-venta {
+    height: 350px;
+    display: grid;
+    grid-template-rows: 80% 30%;
+    text-align: center;
+    background-color: #d7d3d3;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-venta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+    background-color: #fff;
+    padding: 5px;
+}
+
+/*** seccion formulario ***/
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: #d7d3d3;
+    border: 1px solid #ccc
+}
+
+.contact-form label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.contact-form input[type= "submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+}
+
+.contact-form input[type= "submit"] :hover {
+    background-color: orange;
+}
+/*** footer ***/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 100px;
+}
+.copyright {
+    margin-top: 30px;
+}
+
+
+
+/*** Animacion ***/
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
